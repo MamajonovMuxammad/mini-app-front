@@ -1,0 +1,246 @@
+/* Общие стили */
+.app {
+  display: flex;
+  height: 100vh;
+  background-color: #222;
+  font-family: Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #111;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.left, .center, .right {
+  display: flex;
+  align-items: center;
+}
+
+.left .btn, .right .btn {
+  margin-right: 10px;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.left .btn:hover, .right .btn:hover {
+  background-color: #1db954;
+  color: #fff;
+}
+
+.nickname {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main-container {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 50px; /* Отступ сверху для topbar */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+  width: 300px; /* Увеличиваем ширину при наведении */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.sidebar li:hover {
+  color: #1db954;
+  transform: translateX(5px); /* Легкий сдвиг при наведении */
+}
+
+.sidebar li svg {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.sidebar li:hover svg {
+  color: #1db954;
+}
+
+.main-content {
+  flex-grow: 1;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  padding-top: 60px; /* Отступ сверху, чтобы не накладывалась на кнопки */
+
+  transition: background-color 0.3s ease;
+}
+
+/* Стили для кнопки "Назад" */
+.back-btn {
+  position: fixed;
+  background-color: #fff;
+  color: #111;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px; /* Размер иконки */
+  transition: background-color 0.3s, transform 0.3s;
+  top: 25px;
+  right: 300px;
+}
+
+.back-btn:hover {
+  background-color: #1db954;
+  transform: scale(1.1);
+}
+
+/* Стили для кнопки "Телефон" */
+.phone-btn {
+  position: fixed;
+  top: 25px;
+  background-color: #fff;
+  color: #111;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px; /* Размер иконки */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.phone-btn:hover {
+  background-color: #1db954;
+  transform: scale(1.1);
+}
+
+/* Стили для "Этот раздел" */
+.main-content div {
+  padding: 10px;
+  background-color: #444;
+  margin-top: 50px; /* Отступ от кнопок */
+  border-radius: 5px;
+}
+
+/* Правый раздел */
+.right-panel {
+  width: 250px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;  /* Добавляем прокрутку по оси Y */
+}
+
+/* Кнопки правой панели */
+.right-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px; /* Пространство внизу для файлов и сервисов */
+}
+
+.right-buttons .btn {
+  margin: 4px 0; /* Уменьшаем отступы между кнопками */
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Уменьшаем padding для кнопок */
+  font-size: 14px; /* Уменьшаем размер шрифта */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.right-buttons .btn:hover {
+  background-color: #1db954;
+  transform: translateX(5px);
+}
+
+.right-buttons .btn svg {
+  margin-right: 8px; /* Уменьшаем отступ иконки */
+  transition: color 0.3s;
+}
+
+.right-buttons .btn:hover svg {
+  color: #fff;
+}
+
+/* Нижние кнопки */
+.bottom-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-buttons .btn {
+  margin: 8px 0; /* Уменьшаем отступы */
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.bottom-buttons .btn:hover {
+  background-color: #1db954;
+  transform: translateX(5px);
+}
+
+.bottom-buttons .btn svg {
+  margin-right: 8px;
+  transition: color 0.3s;
+}
+
+.bottom-buttons .btn:hover svg {
+  color: #fff;
+
+/* Уменьшаем максимальное пространство для правой панели */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Применяем анимацию fadeIn для всех элементов в правой панели */
+.right-panel {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Стили для кнопки "Назад" */
+
